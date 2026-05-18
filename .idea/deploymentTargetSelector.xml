@@ -6,10 +6,6 @@
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="useAppContext()">
-        <option name="selectionMode" value="DROPDOWN" />
-        <DialogSelection />
-      </SelectionState>
       <SelectionState runConfigName="LandingPageTest">
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
@@ -19,6 +15,14 @@
         <DialogSelection />
       </SelectionState>
       <SelectionState runConfigName="testLandingPageElementsAreVisible()">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DialogSelection />
+      </SelectionState>
+      <SelectionState runConfigName="testLandingPageTitle()">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DialogSelection />
+      </SelectionState>
+      <SelectionState runConfigName="testLandingPageButton()">
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
       </SelectionState>

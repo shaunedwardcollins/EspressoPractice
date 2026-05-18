@@ -31,10 +31,11 @@ class TimberRule : TestWatcher() {
         // Uproot existing trees to avoid duplicate logs if the App class already planted one
         Timber.uprootAll()
         Timber.plant(tree)
+        Timber.i("--- TEST START: ${description.methodName}")
     }
 
     override fun finished(description: Description) {
+        Timber.i("--- TEST END: ${description.methodName}")
         Timber.uproot(tree)
-        // Optionally re-plant the default tree if you want logs to continue after the test
     }
 }

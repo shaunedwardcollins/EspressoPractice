@@ -25,9 +25,11 @@ class TimberRule : TestWatcher() {
 
     override fun starting(description: Description) {
         Timber.plant(tree)
+        Timber.i("--- TEST START: ${description.methodName}")
     }
 
     override fun finished(description: Description) {
+        Timber.i("--- TEST END: ${description.methodName}")
         Timber.uproot(tree)
     }
 }
