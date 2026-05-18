@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EspressoPractice</string>
+    <string name="landing_title">Espresso Practice</string>
+    <string name="btn_simple_ui">Simple UI</string>
+</resources>
