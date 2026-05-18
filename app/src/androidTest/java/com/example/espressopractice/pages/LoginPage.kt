@@ -29,7 +29,7 @@ class LoginPage {
 
     fun verifyErrorDisplayed(): LoginPage {
         try {
-            Timber.d("locating element: errorMessage")
+            Timber.d("located element: errorMessage")
             errorMessage().check(matches(isDisplayed()))
             errorMessage().check(matches(withText(R.string.error_invalid_credentials)))
         } catch (e: Throwable) {

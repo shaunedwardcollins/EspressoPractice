@@ -7,4 +7,19 @@
     <string name="hint_password">Password</string>
     <string name="btn_login">Login</string>
     <string name="error_invalid_credentials">Invalid username or password</string>
+    <string name="simple_ui_title">Simple UI Elements</string>
+    <string name="hint_enter_text">Enter text here</string>
+    <string name="btn_submit">Submit</string>
+    <string name="checkbox_label">Check me</string>
+    <string name="radio_option_1">Option 1</string>
+    <string name="radio_option_2">Option 2</string>
+    <string name="switch_label">Toggle Switch</string>
+    <string name="spinner_label">Select an option:</string>
+    <string name="slider_label">Adjust slider:</string>
+    <string name="result_placeholder">Interaction Result</string>
+    <string-array name="spinner_options">
+        <item>Option A</item>
+        <item>Option B</item>
+        <item>Option C</item>
+    </string-array>
 </resources>
