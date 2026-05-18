@@ -12,44 +12,44 @@ class LandingPage {
     private fun simpleUiButton() = onView(withId(R.id.btnSimpleUI))
 
     fun verifyTitleIsDisplayed(): LandingPage {
-        Timber.d("locating element: title")
         try {
+            Timber.d("located element: title")
             title().check(matches(isDisplayed()))
         } catch (e: Throwable) {
-            Timber.e("TEST FAILED to verify element: title is not displayed")
+            Timber.e("FAILED: title is not displayed")
             throw e
         }
         return this
     }
 
     fun verifyTitleText(): LandingPage {
-        Timber.d("locating element: title")
         try {
+            Timber.d("located element: title")
             title().check(matches(withText(R.string.landing_title)))
         } catch (e: Throwable) {
-            Timber.e("TEST FAILED to verify element: title text mismatch")
+            Timber.e("FAILED: title text mismatch")
             throw e
         }
         return this
     }
 
     fun verifyButtonIsDisplayed(): LandingPage {
-        Timber.d("locating element: simpleUiButton")
         try {
+            Timber.d("located element: simpleUiButton")
             simpleUiButton().check(matches(isDisplayed()))
         } catch (e: Throwable) {
-            Timber.e("TEST FAILED to verify element: simpleUiButton is not displayed")
+            Timber.e("FAILED: simpleUiButton is not displayed")
             throw e
         }
         return this
     }
 
     fun verifyButtonText(): LandingPage {
-        Timber.d("locating element: simpleUiButton")
         try {
+            Timber.d("located element: simpleUiButton")
             simpleUiButton().check(matches(withText(R.string.btn_simple_ui)))
         } catch (e: Throwable) {
-            Timber.e("TEST FAILED to verify element: simpleUiButton text mismatch")
+            Timber.e("FAILED: simpleUiButton text mismatch")
             throw e
         }
         return this

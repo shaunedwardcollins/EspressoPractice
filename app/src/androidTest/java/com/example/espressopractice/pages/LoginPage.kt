@@ -13,10 +13,11 @@ class LoginPage {
     private fun passwordField() = onView(withId(R.id.etPassword))
     private fun loginButton() = onView(withId(R.id.btnLogin))
     private fun loginTitle() = onView(withId(R.id.tvLoginTitle))
+    private fun errorMessage() = onView(withId(R.id.tvErrorMessage))
 
     fun verifyPageLoaded(): LoginPage {
-        Timber.d("locating element: loginTitle")
         try {
+            Timber.d("located element: loginTitle")
             loginTitle().check(matches(isDisplayed()))
             loginTitle().check(matches(withText(R.string.login_title)))
         } catch (e: Throwable) {
@@ -26,9 +27,21 @@ class LoginPage {
         return this
     }
 
-    fun enterUsername(username: String): LoginPage {
-        Timber.i("typing username: $username")
+    fun verifyErrorDisplayed(): LoginPage {
         try {
+            Timber.d("locating element: errorMessage")
+            errorMessage().check(matches(isDisplayed()))
+            errorMessage().check(matches(withText(R.string.error_invalid_credentials)))
+        } catch (e: Throwable) {
+            Timber.e("FAILED to verify error message display")
+            throw e
+        }
+        return this
+    }
+
+    fun enterUsername(username: String): LoginPage {
+        try {
+            Timber.i("typed username: $username")
             usernameField().perform(typeText(username), closeSoftKeyboard())
         } catch (e: Throwable) {
             Timber.e("FAILED to type username")
@@ -38,8 +51,8 @@ class LoginPage {
     }
 
     fun enterPassword(password: String): LoginPage {
-        Timber.i("typing password")
         try {
+            Timber.i("typed password: $password")
             passwordField().perform(typeText(password), closeSoftKeyboard())
         } catch (e: Throwable) {
             Timber.e("FAILED to type password")
@@ -49,8 +62,8 @@ class LoginPage {
     }
 
     fun clickLogin(): LoginPage {
-        Timber.i("clicking login button")
         try {
+            Timber.i("clicked login button")
             loginButton().perform(click())
         } catch (e: Throwable) {
             Timber.e("FAILED to click login button")

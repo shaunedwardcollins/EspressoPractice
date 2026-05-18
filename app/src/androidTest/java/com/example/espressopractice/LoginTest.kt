@@ -39,10 +39,23 @@ class LoginTest {
         // launch LoginActivity DIRECTLY to test the LOGIN flow
         ActivityScenario.launch(LoginActivity::class.java).use {
             loginPage
-                .enterUsername("practiceUser")
-                .enterPassword("password123")
+                .verifyPageLoaded()
+                .enterUsername("admin")
+                .enterPassword("password")
                 .clickLogin()
             landingPage.verifyTitleIsDisplayed()
+        }
+    }
+
+    @Test
+    fun testFailedLogin() {
+        ActivityScenario.launch(LoginActivity::class.java).use {
+            loginPage
+                .verifyPageLoaded()
+                .enterUsername("wrongUser")
+                .enterPassword("wrongPassword")
+                .clickLogin()
+                .verifyErrorDisplayed()
         }
     }
 }
