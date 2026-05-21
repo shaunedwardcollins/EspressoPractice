@@ -36,5 +36,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         Timber.d("MainActivity created and landing page displayed")
+
+        findViewById<Button>(R.id.btnProductList).setOnClickListener {
+            Timber.d("Product List button clicked")
+            val intent = Intent(this, ProductListActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

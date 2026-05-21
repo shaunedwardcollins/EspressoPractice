@@ -44,5 +44,6 @@ dependencies {
     implementation(libs.timber)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.espresso.contrib)
     androidTestImplementation(libs.androidx.junit)
 }
