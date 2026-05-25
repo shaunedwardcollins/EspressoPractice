@@ -42,5 +42,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ProductListActivity::class.java)
             startActivity(intent)
         }
+
+        findViewById<Button>(R.id.btnDateTime).setOnClickListener {
+            Timber.d("Date & Time button clicked")
+            val intent = Intent(this, DateTimeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

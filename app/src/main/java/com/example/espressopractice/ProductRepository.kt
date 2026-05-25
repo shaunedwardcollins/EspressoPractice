@@ -1,7 +1,7 @@
 package com.example.espressopractice
 
 /**
- * A mock database/repository acting as a single source of truth for product data.
+ * * A mock database/repository acting as a single source of truth for product data.
  */
 object ProductRepository {
     private val products = listOf(

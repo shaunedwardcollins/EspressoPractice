@@ -3,6 +3,12 @@
     <string name="landing_title">Espresso Practice</string>
     <string name="btn_simple_ui">Simple UI</string>
     <string name="btn_product_list">Product List</string>
+    <string name="btn_date_time">Date &amp; Time</string>
+    <string name="date_time_title">Date &amp; Time Picker Practice</string>
+    <string name="btn_select_date">Select Date</string>
+    <string name="btn_select_time">Select Time</string>
+    <string name="label_date">Selected Date: </string>
+    <string name="label_time">Selected Time: </string>
     <string name="product_list_title">Electronics Store</string>
     <string name="btn_add_to_cart">Add</string>
     <string name="login_title">Login</string>

@@ -30,6 +30,9 @@
         <activity
             android:name=".ProductListActivity"
             android:exported="false" />
+        <activity
+            android:name=".DateTimeActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
